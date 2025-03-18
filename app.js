@@ -2,12 +2,13 @@ let listaDeAmigos = []; // Array para armazenar as entradas do usuário.
 
 function adicionarAmigo() {
     let nomeAdicionado = document.querySelector('input').value; // Recebe e armazena a entrada do usuário pelo botão "Adicionar".
+    let nomeCapitalizado = nomeAdicionado[0].toUpperCase() + nomeAdicionado.substring(1); // Capitaliza as entradas
 
-    if (!nomeAdicionado.trim()) { // Valida a entrada: vazia ou não.
+    if (!nomeCapitalizado.trim()) { // Valida a entrada: vazia ou não.
         alert('Por favor, digite um nome!'); // Exibe mensagem se a entrada for vazia.
     }
     else {
-        listaDeAmigos.push(nomeAdicionado); // Adiciona entrada ao fim do array.
+        listaDeAmigos.push(nomeCapitalizado); // Adiciona entrada ao fim do array.
     }
     limparCampo();
     exibirListaDeAmigosNaTela();
