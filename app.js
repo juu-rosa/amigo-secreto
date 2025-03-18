@@ -32,7 +32,7 @@ function sortearAmigo() {
         let indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length); // Seleciona um índice aleatório do array.
         let nomeSorteado = listaDeAmigos[indiceSorteado]; // Acessa o item correspondente ao índice.
         let exibirAmigoSorteadoNaTela = document.getElementById('resultado'); // Seleciona o elemento HTML com o id 'resultado'.
-        exibirAmigoSorteadoNaTela.innerHTML = nomeSorteado; // Atualiza o elemento 'resultado' e o nome sorteado aparece na tela.
+        exibirAmigoSorteadoNaTela.innerHTML = `O seu amigo secreto é: ${nomeSorteado}`; // Atualiza o elemento 'resultado' e o nome sorteado aparece na tela.
     }
 }
 
